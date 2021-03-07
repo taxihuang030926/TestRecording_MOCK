@@ -47,21 +47,23 @@
         android:layout_height="wrap_content"
         />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/record_btn"
         android:layout_width="93dp"
         android:layout_height="87dp"
+        android:background="@color/white"
         android:src="@drawable/record_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/record_timer" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/record_list_btn"
         android:layout_width="59dp"
         android:layout_height="56dp"
         android:padding="16dp"
+        android:background="@color/white"
         android:src="@drawable/list_btn"
         app:layout_constraintBottom_toBottomOf="@id/record_btn"
         app:layout_constraintEnd_toEndOf="parent"

@@ -8,7 +8,8 @@
     android:background="@drawable/player_bg"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     app:behavior_hideable="true"
-    app:behavior_peekHeight="70dp">
+    app:behavior_peekHeight="70dp"
+    android:id="@+id/player_sheet">
     <!--Random Number-->
 
 
@@ -27,8 +28,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
             app:srcCompat="@drawable/music_note"
 
             />
@@ -39,8 +40,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:fontFamily="monospace"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
             android:text="Media Player"
             android:textColor="@color/white"
             android:textSize="16sp" />
@@ -51,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:fontFamily="monospace"
-            android:paddingTop="16dp"
+            android:paddingTop="24dp"
             android:paddingEnd="24dp"
             android:paddingBottom="16dp"
             android:text="Not Playing"
@@ -75,33 +76,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/plr_play_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:padding="16dp"
+        android:background="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFileName"
         app:srcCompat="@android:drawable/ic_media_play" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/plr_rewind_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:background="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="@+id/plr_play_btn"
         app:layout_constraintEnd_toStartOf="@+id/plr_play_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/plr_play_btn"
         app:srcCompat="@android:drawable/ic_media_rew" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/plr_forward_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:background="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="@+id/plr_play_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/plr_play_btn"
