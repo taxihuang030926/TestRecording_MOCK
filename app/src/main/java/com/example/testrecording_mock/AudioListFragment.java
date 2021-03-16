@@ -58,6 +58,7 @@ public class AudioListFragment extends Fragment {
 
         audioList.setHasFixedSize(true);
         audioList.setLayoutManager(new LinearLayoutManager(getContext()));
+        audioList.setAdapter(audioListAdapter);
 
         bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override

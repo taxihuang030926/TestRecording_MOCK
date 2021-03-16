@@ -1,6 +1,5 @@
 package com.example.testrecording_mock;
 
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,7 @@ import java.io.File;
 public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.AudioViewHolder> {
 
     private File[] allFiles;
+    private TimeAgo timeAgo;
 
     public AudioListAdapter(File[] allFiles){
         this.allFiles = allFiles;
@@ -24,13 +24,14 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
     @Override
     public AudioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_list_item, parent, false);
+        timeAgo = new TimeAgo();
         return new AudioViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AudioViewHolder holder, int position) {
         holder.list_title.setText(allFiles[position].getName());
-        holder.list_date.setText(allFiles[position].lastModified() + "");
+        holder.list_date.setText(timeAgo.getTimeAgo(allFiles[position].lastModified()));
     }
 
     @Override
@@ -51,5 +52,10 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
             list_title = itemView.findViewById(R.id.audio_list_view);
             list_date = itemView.findViewById(R.id.list_date);
         }
+    }
+
+    public interface onItemListClick {
+        void onClickListener(int position);
+
     }
 }

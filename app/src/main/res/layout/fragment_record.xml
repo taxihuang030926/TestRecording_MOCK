@@ -61,10 +61,9 @@
     <ImageButton
         android:id="@+id/record_list_btn"
         android:layout_width="59dp"
-        android:layout_height="56dp"
-        android:padding="16dp"
+        android:layout_height="59dp"
         android:background="@color/white"
-        android:src="@drawable/list_btn"
+        android:src="@drawable/green_circle"
         app:layout_constraintBottom_toBottomOf="@id/record_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/record_btn"
