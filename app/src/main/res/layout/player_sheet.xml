@@ -86,7 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFileName"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        android:src="@drawable/player_play_btn"/>
 
     <ImageButton
         android:id="@+id/plr_rewind_btn"
@@ -98,7 +98,7 @@
         app:layout_constraintEnd_toStartOf="@+id/plr_play_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/plr_play_btn"
-        app:srcCompat="@android:drawable/ic_media_rew" />
+        android:src="@drawable/player_back_btn"/>
 
     <ImageButton
         android:id="@+id/plr_forward_btn"
@@ -110,7 +110,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/plr_play_btn"
         app:layout_constraintTop_toTopOf="@+id/plr_play_btn"
-        app:srcCompat="@android:drawable/ic_media_ff" />
+        android:src="@drawable/player_forward_btn" />
 
     <SeekBar
         android:layout_margin="32dp"
