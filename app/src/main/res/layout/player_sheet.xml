@@ -113,6 +113,7 @@
         android:src="@drawable/player_forward_btn" />
 
     <SeekBar
+        android:id="@+id/plr_seekbar"
         android:layout_margin="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
