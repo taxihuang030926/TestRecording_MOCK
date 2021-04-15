@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +12,7 @@
         android:layout_width="130dp"
         android:layout_height="111dp"
         android:layout_marginTop="64dp"
-        android:src="@drawable/green_circle"
+        android:src="@drawable/red_mic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:layout_marginEnd="32dp"
         android:fontFamily="monospace"
         android:lineHeight="32dp"
-        android:text="Press the mic button \n to start recording"
+        android:text="Press the mic button\nto start recording"
         android:textAlignment="center"
         android:textColor="@color/navy_blue"
         android:textSize="18sp"
@@ -60,10 +60,11 @@
 
     <ImageButton
         android:id="@+id/record_list_btn"
-        android:layout_width="59dp"
-        android:layout_height="59dp"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
         android:background="@color/white"
-        android:src="@drawable/green_circle"
+        android:src="@drawable/list_btn"
         app:layout_constraintBottom_toBottomOf="@id/record_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/record_btn"
