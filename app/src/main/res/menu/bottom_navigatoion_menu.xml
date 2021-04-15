@@ -2,6 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_rec_btn"
+        android:icon="@drawable/white_mic"
+        android:title="Record"/>
 
+    <item
+        android:id="@+id/nav_list_btn"
+        android:icon="@drawable/white_list"
+        android:title="List"/>
+
+    <item
+        android:id="@+id/nav_analyse"
+        android:icon="@drawable/line_chart_white"
+        android:title="Analyse"/>
 
 </menu>
