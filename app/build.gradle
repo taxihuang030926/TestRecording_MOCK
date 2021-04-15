@@ -1,5 +1,7 @@
 plugins {
     id 'com.android.application'
+    //應用插件
+    //id 'com.chaquo.python'
 }
 
 android {
@@ -13,9 +15,24 @@ android {
         versionCode 1
         versionName "1.0"
 
+        //ndk {
+            //abiFilters "armeabi-v7a", "x86"
+        //}
+
+        //python {
+            //buildPython "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
+            //pip{
+                //install 'os'
+                //install 'time'
+                //install 'shutil'
+                //install 'picturesimilary'
+                //install 'pandas'
+                //install 'pydub'
+            //}
+        //}
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
