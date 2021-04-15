@@ -33,7 +33,7 @@ import java.util.Locale;
 public class RecordFragment extends Fragment implements View.OnClickListener {
 
     private NavController navController;
-    private ImageButton rcdListBtn;
+
     private ImageButton rcdBtn;
     private TextView filenameText;
 
@@ -58,37 +58,17 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
-        rcdListBtn = view.findViewById(R.id.record_list_btn);
+
         rcdBtn = view.findViewById(R.id.record_btn);
         timer = view.findViewById(R.id.record_timer);
         filenameText = view.findViewById(R.id.record_filename);
 
-        rcdListBtn.setOnClickListener(this);
         rcdBtn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.record_list_btn:
-                if(isRecording){
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
-                    alertDialog.setPositiveButton("OKAY", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            navController.navigate(R.id.action_recordFragment_to_audioListFragment);
-                            isRecording = false;
-                        }
-                    });
-                    alertDialog.setNegativeButton("CANCEL", null);
-                    alertDialog.setTitle("Audio Still Recording");
-                    alertDialog.setMessage("Are you sure, you want to stop recording?");
-                    alertDialog.create().show();
-                } else {
-                    navController.navigate(R.id.action_recordFragment_to_audioListFragment);
-                }
-                break;
-
             case R.id.record_btn:
                 if(isRecording){
                     //Stop Recording
